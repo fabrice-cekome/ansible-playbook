@@ -1,4 +1,5 @@
- - name: talk to all hosts just so we can learn about them
+ - name: Ansible task test
    hosts: all
    tasks:
-     - name: Classify hosts depending on their OS distribution
+     - name: get current rep
+       shell: pwd
