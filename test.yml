@@ -1,5 +1,5 @@
  - name: Ansible task test
-   hosts: all
+   hosts: tests
    tasks:
      - name: get current rep
        shell: pwd
