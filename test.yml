@@ -1,8 +1,9 @@
- - name: Ansible task test
-   hosts: tests
-   tasks:
-     - name: get current rep
-       shell: pwd
-       register: shell_result
-     - debug: 
-       var: shell_result.stdout_lines
+- name: whereiam
+  hosts: tests
+
+  tasks:
+  - name: whereiam
+    shell: pwd
+    register: shell_result
+  - debug: 
+      var: shell_result.stdout_lines
