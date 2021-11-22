@@ -1,6 +1,6 @@
 ---
 - name: backup themecloud script
-  local_action: ansible.builtin.command /home/fabrice/backup-script/tcl_backup.sh {{ hostvars[groups['host_group'][0]].ansible_port }}
+  local_action: ansible.builtin.command /home/fabrice/backup-script/checkport.sh {{ hostvars[groups['host_group'][0]].ansible_port }}
   register: shell_result
   - debug: 
       var: shell_result.stdout_lines
