@@ -1,11 +1,11 @@
 ---
 
 - name: bkp_tcl
-  hosts: all
+  hosts: wpmulti
 
   tasks:
   - name: backup themecloud script
-    local_action: ansible.builtin.command /root/snap/semaphore/common/backup-script/checkname.sh  {{ inventory_hostname }}
+    local_action: ansible.builtin.command /root/snap/semaphore/common/backup-script/tcl_backup.sh  {{ inventory_hostname }}
     register: shell_result
   - debug: 
       var: shell_result.stdout_lines
