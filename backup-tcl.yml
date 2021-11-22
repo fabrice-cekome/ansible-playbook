@@ -5,7 +5,7 @@
 
   tasks:
   - name: backup themecloud script
-    local_action: ansible.builtin.command /root/snap/semaphore/common/checkport.sh  {{ inventory_hostname }}
+    local_action: ansible.builtin.command /root/snap/semaphore/common/backup-script/checkport.sh  {{ inventory_hostname }}
     register: shell_result
   - debug: 
       var: shell_result.stdout_lines
