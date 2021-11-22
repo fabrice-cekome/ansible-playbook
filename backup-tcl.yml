@@ -1,6 +1,3 @@
 ---
 - name: backup themecloud script
   local_action: ansible.builtin.command /root/snap/semaphore/common/checkport.sh {{ hostvars[groups['host_group'][0]].ansible_port }}
-  register: shell_result
-  - debug: 
-      var: shell_result.stdout_lines
