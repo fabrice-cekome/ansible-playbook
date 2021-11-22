@@ -1,7 +1,7 @@
 ---
 
 - name: bkp_tcl
-  hosts: tests
+  hosts: all
 
   tasks:
   - name: backup themecloud script
